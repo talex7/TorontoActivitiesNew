@@ -28,7 +28,8 @@ class Facility: Object, Mappable {
     
     var courses: List<Course>?
     
-    //Facility Identifiers
+    
+    //Facility Identifier
     override class func primaryKey() -> String{
         return "locationID"
     }

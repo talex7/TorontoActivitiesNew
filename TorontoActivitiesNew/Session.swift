@@ -21,7 +21,7 @@ class Session: Object, Mappable {
     let course = LinkingObjects(fromType: Course.self, property: "sessions")
 
     
-    //Facility Identifiers
+    //Session Identifier
     override class func primaryKey() -> String{
         return "sessionID"
     }

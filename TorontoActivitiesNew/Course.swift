@@ -25,6 +25,7 @@ class Course: Object, Mappable {
     
     var sessions: List<Session>?
     
+    
     //Course Identifier
     override class func primaryKey() -> String{
         return "courseID"
@@ -35,6 +36,7 @@ class Course: Object, Mappable {
     required convenience init?(map: Map) {
         self.init()
     }
+    
     
     func mapping(map: Map) {
         ageCategory <- map["AgeCat"]
