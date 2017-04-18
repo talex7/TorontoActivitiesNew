@@ -15,6 +15,9 @@
 		74D12B881EA434A000A5C756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D12B871EA434A000A5C756 /* Assets.xcassets */; };
 		74D12B8B1EA434A000A5C756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D12B891EA434A000A5C756 /* LaunchScreen.storyboard */; };
 		74D12B931EA5528400A5C756 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B921EA5528400A5C756 /* Facility.swift */; };
+		74D12B971EA57E2700A5C756 /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B961EA57E2700A5C756 /* ArrayTransform.swift */; };
+		74D12B991EA5888900A5C756 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B981EA5888900A5C756 /* Course.swift */; };
+		74D12B9B1EA5889700A5C756 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B9A1EA5889700A5C756 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		74D12B8A1EA434A000A5C756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D12B8C1EA434A000A5C756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D12B921EA5528400A5C756 /* Facility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		74D12B961EA57E2700A5C756 /* ArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
+		74D12B981EA5888900A5C756 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		74D12B9A1EA5889700A5C756 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8080E121BEDCD6A0F9F2AA18 /* Pods-TorontoActivitiesNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoActivitiesNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoActivitiesNew/Pods-TorontoActivitiesNew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,9 @@
 				74D12B891EA434A000A5C756 /* LaunchScreen.storyboard */,
 				74D12B8C1EA434A000A5C756 /* Info.plist */,
 				74D12B921EA5528400A5C756 /* Facility.swift */,
+				74D12B981EA5888900A5C756 /* Course.swift */,
+				74D12B9A1EA5889700A5C756 /* Session.swift */,
+				74D12B961EA57E2700A5C756 /* ArrayTransform.swift */,
 			);
 			path = TorontoActivitiesNew;
 			sourceTree = "<group>";
@@ -218,9 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D12B9B1EA5889700A5C756 /* Session.swift in Sources */,
+				74D12B991EA5888900A5C756 /* Course.swift in Sources */,
 				74D12B831EA434A000A5C756 /* SessionViewController.swift in Sources */,
 				74D12B7F1EA434A000A5C756 /* AppDelegate.swift in Sources */,
 				74D12B931EA5528400A5C756 /* Facility.swift in Sources */,
+				74D12B971EA57E2700A5C756 /* ArrayTransform.swift in Sources */,
 				74D12B811EA434A000A5C756 /* FacilityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
