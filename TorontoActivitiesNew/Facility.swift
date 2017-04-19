@@ -15,9 +15,9 @@ class Facility: Object, Mappable {
     //Properties
     dynamic var accessibility: String?
     dynamic var address: String?
-    dynamic var ageCategories: [String]?
-    dynamic var ageGroups: [String]?
-    dynamic var categories: [String]?
+//    dynamic var ageCategories: [String]?
+//    dynamic var ageGroups: [String]?
+//    dynamic var categories: [String]?
     dynamic var district: String?
     dynamic var latitude: String?
     dynamic var longitude: String?
@@ -26,7 +26,7 @@ class Facility: Object, Mappable {
     dynamic var postalCode: String?
     dynamic var phone: String?
     
-    var courses: List<Course>?
+    var courses = List<Course>()
     
     
     //Facility Identifier
@@ -35,7 +35,7 @@ class Facility: Object, Mappable {
     }
     
     
-    //Mapping functions
+    //Mapping Functions
     required convenience init?(map: Map) {
         self.init()
     }
@@ -43,9 +43,9 @@ class Facility: Object, Mappable {
     func mapping(map: Map) {
         accessibility <- map["Accessible"]
         address <- map["Address"]
-        ageCategories <- map["AgeCat"]
-        ageGroups <- map["AgeGroups"]
-        categories <- map["Categories"]
+//        ageCategories <- map["AgeCat"]
+//        ageGroups <- map["AgeGroups"]
+//        categories <- map["Categories"]
         district <- map["District"]
         latitude <- map["Latitude"]
         longitude <- map["Longitude"]
@@ -54,6 +54,7 @@ class Facility: Object, Mappable {
         postalCode <- map["PostalCode"]
         phone <- map["Phone"]
         courses <- (map["Courses"], RealmListTransform<Course>())
+        
     }
     
 }

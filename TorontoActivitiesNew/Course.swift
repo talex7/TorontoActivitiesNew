@@ -23,7 +23,7 @@ class Course: Object, Mappable {
     
     let facility = LinkingObjects(fromType: Facility.self, property: "courses")
     
-    var sessions: List<Session>?
+    var sessions = List<Session>()
     
     
     //Course Identifier
@@ -32,7 +32,7 @@ class Course: Object, Mappable {
     }
     
     
-    //Mapping functions
+    //Mapping Functions
     required convenience init?(map: Map) {
         self.init()
     }

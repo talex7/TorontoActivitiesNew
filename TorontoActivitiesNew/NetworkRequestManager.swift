@@ -13,17 +13,24 @@ import RealmSwift
 
 class NetworkRequestManager {
     
-    func requestJSON() {
+    static func requestJSON(completion : @escaping () -> ()) {
         
-        Alamofire.request("https://toronto-activities.herokuapp.com/activities/1").responseArray {
-            (response: DataResponse<[Facility]>) in
+        DispatchQueue.global(qos: .userInteractive).async {
             
-            guard let facilities = response.result.value else { return }
-            let realm = try! Realm()
-            
-            try! realm.write {
-                realm.add(facilities, update: true)
+            Alamofire.request("https://toronto-activities.herokuapp.com/activities/1").responseArray {
+                (response: DataResponse<[Facility]>) in
+                guard let facilities = response.result.value else { return }
+                print(facilities.count)
+                let realm = try! Realm()
+                
+                try! realm.write {
+                    realm.add(facilities, update: true)
+                }
+                DispatchQueue.main.async {
+                    completion()
+                }
             }
+            
         }
     }
     

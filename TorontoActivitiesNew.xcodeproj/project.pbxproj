@@ -19,6 +19,7 @@
 		74D12B991EA5888900A5C756 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B981EA5888900A5C756 /* Course.swift */; };
 		74D12B9B1EA5889700A5C756 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B9A1EA5889700A5C756 /* Session.swift */; };
 		74D12B9D1EA5912500A5C756 /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B9C1EA5912500A5C756 /* NetworkRequestManager.swift */; };
+		74D12B9F1EA5954900A5C756 /* FacilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B9E1EA5954900A5C756 /* FacilityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,8 @@
 		52076702C9598699D610EA3F /* Pods-TorontoActivitiesNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoActivitiesNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoActivitiesNew/Pods-TorontoActivitiesNew.debug.xcconfig"; sourceTree = "<group>"; };
 		74D12B7B1EA434A000A5C756 /* TorontoActivitiesNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoActivitiesNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D12B7E1EA434A000A5C756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74D12B801EA434A000A5C756 /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityViewController.swift; sourceTree = "<group>"; };
-		74D12B821EA434A000A5C756 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		74D12B801EA434A000A5C756 /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacilityViewController.swift; path = TorontoActivitiesNew/FacilityViewController.swift; sourceTree = "<group>"; };
+		74D12B821EA434A000A5C756 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionViewController.swift; path = TorontoActivitiesNew/SessionViewController.swift; sourceTree = "<group>"; };
 		74D12B851EA434A000A5C756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D12B871EA434A000A5C756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D12B8A1EA434A000A5C756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		74D12B981EA5888900A5C756 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		74D12B9A1EA5889700A5C756 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		74D12B9C1EA5912500A5C756 /* NetworkRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
+		74D12B9E1EA5954900A5C756 /* FacilityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacilityTableViewCell.swift; path = TorontoActivitiesNew/FacilityTableViewCell.swift; sourceTree = "<group>"; };
 		8080E121BEDCD6A0F9F2AA18 /* Pods-TorontoActivitiesNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoActivitiesNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoActivitiesNew/Pods-TorontoActivitiesNew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,19 +93,45 @@
 			isa = PBXGroup;
 			children = (
 				74D12B7E1EA434A000A5C756 /* AppDelegate.swift */,
-				74D12B801EA434A000A5C756 /* FacilityViewController.swift */,
-				74D12B821EA434A000A5C756 /* SessionViewController.swift */,
 				74D12B841EA434A000A5C756 /* Main.storyboard */,
 				74D12B871EA434A000A5C756 /* Assets.xcassets */,
 				74D12B891EA434A000A5C756 /* LaunchScreen.storyboard */,
 				74D12B8C1EA434A000A5C756 /* Info.plist */,
-				74D12B921EA5528400A5C756 /* Facility.swift */,
-				74D12B981EA5888900A5C756 /* Course.swift */,
-				74D12B9A1EA5889700A5C756 /* Session.swift */,
+				74D12BA01EA5958000A5C756 /* ViewControllers */,
+				74D12BA21EA595BC00A5C756 /* Objects */,
 				74D12B961EA57E2700A5C756 /* ArrayTransform.swift */,
 				74D12B9C1EA5912500A5C756 /* NetworkRequestManager.swift */,
 			);
 			path = TorontoActivitiesNew;
+			sourceTree = "<group>";
+		};
+		74D12BA01EA5958000A5C756 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				74D12B801EA434A000A5C756 /* FacilityViewController.swift */,
+				74D12B821EA434A000A5C756 /* SessionViewController.swift */,
+				74D12BA11EA5959B00A5C756 /* TableViewCells */,
+			);
+			name = ViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		74D12BA11EA5959B00A5C756 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				74D12B9E1EA5954900A5C756 /* FacilityTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		74D12BA21EA595BC00A5C756 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				74D12B921EA5528400A5C756 /* Facility.swift */,
+				74D12B981EA5888900A5C756 /* Course.swift */,
+				74D12B9A1EA5889700A5C756 /* Session.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D12B9F1EA5954900A5C756 /* FacilityTableViewCell.swift in Sources */,
 				74D12B9B1EA5889700A5C756 /* Session.swift in Sources */,
 				74D12B991EA5888900A5C756 /* Course.swift in Sources */,
 				74D12B831EA434A000A5C756 /* SessionViewController.swift in Sources */,

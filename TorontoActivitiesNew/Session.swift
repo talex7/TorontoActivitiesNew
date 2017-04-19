@@ -27,7 +27,7 @@ class Session: Object, Mappable {
     }
     
     
-    //Mapping functions
+    //Mapping Functions
     required convenience init?(map: Map) {
         self.init()
     }
