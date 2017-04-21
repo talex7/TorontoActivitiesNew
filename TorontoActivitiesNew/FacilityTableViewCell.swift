@@ -16,7 +16,6 @@ class FacilityTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
