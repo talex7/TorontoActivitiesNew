@@ -103,6 +103,7 @@
 				74D12BA21EA595BC00A5C756 /* Objects */,
 				74D12B961EA57E2700A5C756 /* ArrayTransform.swift */,
 				74D12B9C1EA5912500A5C756 /* NetworkRequestManager.swift */,
+				74D12BA51EA9B0CD00A5C756 /* TAView.swift */,
 			);
 			path = TorontoActivitiesNew;
 			sourceTree = "<group>";
@@ -132,7 +133,6 @@
 				74D12B921EA5528400A5C756 /* Facility.swift */,
 				74D12B981EA5888900A5C756 /* Course.swift */,
 				74D12B9A1EA5889700A5C756 /* Session.swift */,
-				74D12BA51EA9B0CD00A5C756 /* TAView.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E44M545Q67;
 				INFOPLIST_FILE = TorontoActivitiesNew/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ta.TorontoActivitiesNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E44M545Q67;
 				INFOPLIST_FILE = TorontoActivitiesNew/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ta.TorontoActivitiesNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";

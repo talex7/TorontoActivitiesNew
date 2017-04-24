@@ -24,33 +24,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GwC-xw-ERQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="OdD-DU-cey">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="C4U-vy-62r">
-                                            <rect key="frame" x="177.5" y="267" width="20" height="20"/>
-                                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </activityIndicatorView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="tintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="C4U-vy-62r" firstAttribute="centerY" secondItem="OdD-DU-cey" secondAttribute="centerY" id="FNE-0d-wUV"/>
-                                        <constraint firstItem="C4U-vy-62r" firstAttribute="centerX" secondItem="OdD-DU-cey" secondAttribute="centerX" id="wqA-l7-ksA"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                            <color key="value" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="50" id="0nA-gn-ulS" customClass="FacilityTableViewCell" customModule="TorontoActivitiesNew" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="582" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0nA-gn-ulS" id="ZpD-ZR-kPL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -79,17 +55,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdD-DU-cey" customClass="TAView" customModule="TorontoActivitiesNew" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="C4U-vy-62r">
+                                        <rect key="frame" x="177.5" y="267" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="GwC-xw-ERQ" secondAttribute="bottom" id="0T7-N1-Gfj"/>
                             <constraint firstItem="GwC-xw-ERQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="5Lh-iy-m2u"/>
+                            <constraint firstItem="OdD-DU-cey" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="Dl8-2B-xas"/>
+                            <constraint firstItem="OdD-DU-cey" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Phl-LA-ybn"/>
                             <constraint firstAttribute="trailing" secondItem="GwC-xw-ERQ" secondAttribute="trailing" id="ScO-Ht-DSv"/>
                             <constraint firstItem="GwC-xw-ERQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="bLf-52-Gve"/>
+                            <constraint firstItem="OdD-DU-cey" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cAU-t0-47G"/>
+                            <constraint firstItem="OdD-DU-cey" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="khv-dE-eUz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1oO-Qc-woC"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="C4U-vy-62r" id="3aU-5L-FEO"/>
+                        <outlet property="loadingView" destination="OdD-DU-cey" id="j0z-lO-f4Y"/>
                         <outlet property="tableView" destination="GwC-xw-ERQ" id="Jaw-7F-3TT"/>
                     </connections>
                 </viewController>
