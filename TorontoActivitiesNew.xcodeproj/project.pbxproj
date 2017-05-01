@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11480CD1160B6B13E70CCB6A /* Pods_TorontoActivitiesNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8468FDC503F434D1200068 /* Pods_TorontoActivitiesNew.framework */; };
+		748314AA1EB2228300173442 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748314A91EB2228300173442 /* SessionTableViewCell.swift */; };
+		74BB35521EAEA77700E24D95 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BB35511EAEA77700E24D95 /* DetailedViewController.swift */; };
 		74D12B7F1EA434A000A5C756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B7E1EA434A000A5C756 /* AppDelegate.swift */; };
 		74D12B811EA434A000A5C756 /* FacilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B801EA434A000A5C756 /* FacilityViewController.swift */; };
 		74D12B831EA434A000A5C756 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D12B821EA434A000A5C756 /* SessionViewController.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		2A8468FDC503F434D1200068 /* Pods_TorontoActivitiesNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TorontoActivitiesNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52076702C9598699D610EA3F /* Pods-TorontoActivitiesNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoActivitiesNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TorontoActivitiesNew/Pods-TorontoActivitiesNew.debug.xcconfig"; sourceTree = "<group>"; };
+		748314A91EB2228300173442 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		74BB35511EAEA77700E24D95 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		74D12B7B1EA434A000A5C756 /* TorontoActivitiesNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoActivitiesNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D12B7E1EA434A000A5C756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D12B801EA434A000A5C756 /* FacilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacilityViewController.swift; path = TorontoActivitiesNew/FacilityViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				74D12B801EA434A000A5C756 /* FacilityViewController.swift */,
 				74D12B821EA434A000A5C756 /* SessionViewController.swift */,
+				74BB35511EAEA77700E24D95 /* DetailedViewController.swift */,
 				74D12BA11EA5959B00A5C756 /* TableViewCells */,
 			);
 			name = ViewControllers;
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				74D12B9E1EA5954900A5C756 /* FacilityTableViewCell.swift */,
+				748314A91EB2228300173442 /* SessionTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -261,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748314AA1EB2228300173442 /* SessionTableViewCell.swift in Sources */,
 				74D12B9F1EA5954900A5C756 /* FacilityTableViewCell.swift in Sources */,
 				74D12B9B1EA5889700A5C756 /* Session.swift in Sources */,
 				74D12B991EA5888900A5C756 /* Course.swift in Sources */,
+				74BB35521EAEA77700E24D95 /* DetailedViewController.swift in Sources */,
 				74D12B831EA434A000A5C756 /* SessionViewController.swift in Sources */,
 				74D12B7F1EA434A000A5C756 /* AppDelegate.swift in Sources */,
 				74D12BA61EA9B0CD00A5C756 /* TAView.swift in Sources */,

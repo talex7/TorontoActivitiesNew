@@ -9,22 +9,29 @@
 import UIKit
 import RealmSwift
 
+
+
 class FacilityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    //Properties
+
+    //MARK: Properties
     var facilities : Results<Facility>?
     
     
-    //Outlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        activityIndicator.transform = CGAffineTransform.init(scaleX: 3.0, y: 3.0)
+        
         let realm = try! Realm()
         
         if realm.objects(Facility.self).count < 1 {
@@ -38,7 +45,8 @@ class FacilityViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
         facilities = realm.objects(Facility.self)
-        self.loadingView.alpha = 0
+        loadingView.isHidden = true
+        activityIndicator.stopAnimating()
         tableView.reloadData()
     }
     
@@ -48,7 +56,7 @@ class FacilityViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    //UITableViewDataSource protocol
+    //MARK: - UITableViewDataSource & Delegate Protocol Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (facilities?.count)! > 0 {
@@ -72,6 +80,24 @@ class FacilityViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if facilities != nil {
+            performSegue(withIdentifier: "detailed", sender: self)
+        }
+    }
+    
+    //Push information for selected facility into the detailed VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailed" {
+            let detailedVC = segue.destination as! DetailedViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            
+            detailedVC.selectedFacility = facilities![indexPath.row]
+        }
+    }
+    
+    
     func configureCell(cell: FacilityTableViewCell, indexPath: IndexPath) {
         
         //Checks if any facilties have been downloaded into data array and populates label text
@@ -89,9 +115,9 @@ class FacilityViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    
     func showLoadingView() {
-        loadingView.alpha = 1
-        activityIndicator.color = UIColor.darkGray
+        loadingView.isHidden = false
         activityIndicator.hidesWhenStopped =  true
         activityIndicator.startAnimating()
     }

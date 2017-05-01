@@ -15,9 +15,9 @@ class Facility: Object, Mappable {
     //Properties
     dynamic var accessibility: String?
     dynamic var address: String?
-//    dynamic var ageCategories: [String]?
-//    dynamic var ageGroups: [String]?
-//    dynamic var categories: [String]?
+    dynamic var ageCategories: String?
+    dynamic var ageGroups: String?
+    dynamic var categories: String?
     dynamic var district: String?
     dynamic var latitude: String?
     dynamic var longitude: String?
@@ -43,9 +43,9 @@ class Facility: Object, Mappable {
     func mapping(map: Map) {
         accessibility <- map["Accessible"]
         address <- map["Address"]
-//        ageCategories <- map["AgeCat"]
-//        ageGroups <- map["AgeGroups"]
-//        categories <- map["Categories"]
+        ageCategories <- map["AgeCat"]
+        ageGroups <- map["AgeGroups"]
+        categories <- map["Categories"]
         district <- map["District"]
         latitude <- map["Latitude"]
         longitude <- map["Longitude"]
